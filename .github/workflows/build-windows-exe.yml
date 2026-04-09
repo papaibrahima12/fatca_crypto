@@ -6,10 +6,6 @@ on:
     tags: ["v*"]
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: fatca_crypto
-
 jobs:
   build:
     runs-on: windows-latest
@@ -38,10 +34,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: FATCACrypto-GUI-Windows
-          path: fatca_crypto/dist/FATCACrypto.exe
+          path: dist/FATCACrypto.exe
 
       - name: Upload CLI EXE
         uses: actions/upload-artifact@v4
         with:
           name: FATCACrypto-CLI-Windows
-          path: fatca_crypto/dist/fatca-crypto.exe
+          path: dist/fatca-crypto.exe
