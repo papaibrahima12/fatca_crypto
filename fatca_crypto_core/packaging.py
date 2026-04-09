@@ -13,8 +13,8 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-from crypto.encryptor import EncryptedPayload, _build_metadata_xml
-from utils.errors import PackagingError
+from fatca_crypto_core.encryptor import EncryptedPayload, _build_metadata_xml
+from fatca_utils.errors import PackagingError
 
 
 def package_for_ides(

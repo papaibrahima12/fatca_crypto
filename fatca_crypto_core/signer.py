@@ -23,8 +23,8 @@ from lxml import etree
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 
-from fatca_crypto.crypto.certificates import CertificateBundle
-from fatca_crypto.utils.errors import SigningError
+from fatca_crypto_core.certificates import CertificateBundle
+from fatca_utils.errors import SigningError
 
 # ---------------------------------------------------------------------------
 # XML Signature constants

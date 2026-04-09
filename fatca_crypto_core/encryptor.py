@@ -24,9 +24,9 @@ from cryptography.hazmat.primitives.asymmetric import padding as asym_padding
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.padding import PKCS7
 
-from crypto.certificates import CertificateBundle
-from utils.errors import EncryptionError
-from utils.security import SecureBytes
+from fatca_crypto_core.certificates import CertificateBundle
+from fatca_utils.errors import EncryptionError
+from fatca_utils.security import SecureBytes
 
 # ---------------------------------------------------------------------------
 # Constants

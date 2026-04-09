@@ -17,16 +17,17 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import traceback
 
-from . import __version__, __app_name__
-from .utils.errors import FatcaCryptoError
+__version__ = "1.0.0"
+__app_name__ = "FATCA Crypto Utility"
+from fatca_utils.errors import FatcaCryptoError
 
 
 def main(argv: list[str] | None = None) -> int:
     """Entry point for the CLI."""
     parser = _build_parser()
     args = parser.parse_args(argv)
-    from .utils.errors import FatcaCryptoError
-    from .utils.errors import FatcaCryptoError
+    from fatca_utils.errors import FatcaCryptoError
+    from fatca_utils.errors import FatcaCryptoError
 
     if not hasattr(args, "func"):
         parser.print_help()
@@ -235,11 +236,11 @@ def _resolve_password(args, cert_path: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 def _cmd_encrypt(args: argparse.Namespace) -> int:
-    from .crypto.certificates import load_certificate, load_public_certificate
-    from .crypto.packaging import package_for_ides
-    from .crypto.signer import sign_xml_bytes
-    from .crypto.encryptor import encrypt_xml_bytes
-    from .utils.validators import validate_certificate_expiry
+    from fatca_crypto_core.certificates import load_certificate, load_public_certificate
+    from fatca_crypto_core.packaging import package_for_ides
+    from fatca_crypto_core.signer import sign_xml_bytes
+    from fatca_crypto_core.encryptor import encrypt_xml_bytes
+    from fatca_utils.validators import validate_certificate_expiry
 
     _print_header("FATCA XML Encryption")
 
@@ -286,8 +287,8 @@ def _cmd_encrypt(args: argparse.Namespace) -> int:
 # ---------------------------------------------------------------------------
 
 def _cmd_decrypt(args: argparse.Namespace) -> int:
-    from .crypto.certificates import load_certificate
-    from .crypto.decryptor import (
+    from fatca_crypto_core.certificates import load_certificate
+    from fatca_crypto_core.decryptor import (
         decrypt_feedback,
         decrypt_feedback_single_file,
     )
@@ -339,9 +340,9 @@ def _cmd_decrypt(args: argparse.Namespace) -> int:
 # ---------------------------------------------------------------------------
 
 def _cmd_sign(args: argparse.Namespace) -> int:
-    from .crypto.certificates import load_certificate
-    from .crypto.signer import sign_xml
-    from .utils.validators import validate_certificate_expiry
+    from fatca_crypto_core.certificates import load_certificate
+    from fatca_crypto_core.signer import sign_xml
+    from fatca_utils.validators import validate_certificate_expiry
 
     _print_header("XML Signing")
 
@@ -368,7 +369,7 @@ def _cmd_info(args: argparse.Namespace) -> int:
     _print_header("File Information")
 
     if args.cert:
-        from .crypto.certificates import load_certificate
+        from fatca_crypto_core.certificates import load_certificate
 
         _print_step("Certificate details:")
         cert = load_certificate(args.cert)
@@ -380,7 +381,7 @@ def _cmd_info(args: argparse.Namespace) -> int:
         print(f"  Chain certs: {len(cert.chain)}")
 
     if args.xml:
-        from .xml.parser import get_xml_info
+        from fatca_xml.parser import get_xml_info
 
         _print_step("XML file details:")
         info = get_xml_info(args.xml)

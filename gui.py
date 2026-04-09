@@ -15,7 +15,8 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 
-from __init__ import __version__, __app_name__
+__version__ = "1.0.0"
+__app_name__ = "FATCA Crypto Utility"
 
 
 # ---------------------------------------------------------------------------
@@ -197,7 +198,7 @@ class FatcaCryptoGUI:
 
         def detect():
             try:
-                from .xml.parser import extract_giin_from_xml
+                from fatca_xml.parser import extract_giin_from_xml
                 giin = extract_giin_from_xml(xml_path)
                 if giin:
                     self.root.after(0, lambda g=giin: self._set_giin(g))
@@ -427,13 +428,13 @@ class FatcaCryptoGUI:
         )
 
     def _do_encrypt(self, xml, cert, irs_cert, giin, output, password):
-        from .crypto.certificates import (
+        from fatca_crypto_core.certificates import (
             load_certificate, load_public_certificate,
         )
-        from .crypto.signer import sign_xml_bytes
-        from .crypto.encryptor import encrypt_xml_bytes
-        from .crypto.packaging import package_for_ides
-        from .utils.validators import validate_certificate_expiry
+        from fatca_crypto_core.signer import sign_xml_bytes
+        from fatca_crypto_core.encryptor import encrypt_xml_bytes
+        from fatca_crypto_core.packaging import package_for_ides
+        from fatca_utils.validators import validate_certificate_expiry
         from pathlib import Path
 
         sender = load_certificate(cert, giin_override=giin, password=password)
@@ -476,8 +477,8 @@ class FatcaCryptoGUI:
         )
 
     def _do_decrypt(self, payload_path, key_path, cert, output, password):
-        from .crypto.certificates import load_certificate
-        from .crypto.decryptor import (
+        from fatca_crypto_core.certificates import load_certificate
+        from fatca_crypto_core.decryptor import (
             decrypt_feedback, decrypt_feedback_single_file,
         )
 

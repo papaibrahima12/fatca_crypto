@@ -9,7 +9,7 @@ from pathlib import Path
 
 from lxml import etree
 
-from utils.errors import XMLError
+from fatca_utils.errors import XMLError
 
 # GIIN format: XXXXXX.XXXXX.XX.XXX
 _GIIN_PATTERN = re.compile(r"[A-Z0-9]{6}\.[A-Z0-9]{5}\.[A-Z]{2}\.\d{3}")

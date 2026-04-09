@@ -12,7 +12,8 @@
       "Bash(/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m fatca_crypto.test_signature)",
       "WebSearch",
       "WebFetch(domain:www.irs.gov)",
-      "WebFetch(domain:irsgov.github.io)"
+      "WebFetch(domain:irsgov.github.io)",
+      "Bash(python3 -c \"import xml; print\\(xml.__file__\\)\")"
     ]
   }
 }

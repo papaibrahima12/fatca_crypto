@@ -6,7 +6,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from utils.errors import (
+from fatca_utils.errors import (
     CertificateExpiredError,
     CertificateNotFoundError,
     InvalidGIINError,
