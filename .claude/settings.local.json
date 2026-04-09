@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/papaibrahimasow/Documents/fatca-moulinette/**)",
+      "Bash(pip list:*)",
+      "Bash(python -c \"import tkinter; print\\(''''tkinter OK''''\\)\")",
+      "Bash(python -c \"import lxml; print\\(''''lxml OK''''\\)\")",
+      "Bash(python -c \"import cryptography; print\\(''''cryptography OK''''\\)\")",
+      "Bash(python3 -c \"import lxml; print\\(''lxml OK''\\)\")",
+      "Bash(python3 -c \"import cryptography; print\\(''cryptography OK''\\)\")",
+      "Bash(python3 -c \"import tkinter; print\\(''tkinter OK''\\)\")",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m fatca_crypto.test_signature)",
+      "WebSearch",
+      "WebFetch(domain:www.irs.gov)",
+      "WebFetch(domain:irsgov.github.io)"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# PyInstaller
+*.manifest
+
+# Certificates & keys (never commit)
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+
+# Output files
+output/
+test_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+venv/

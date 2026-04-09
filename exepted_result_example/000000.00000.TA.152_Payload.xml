@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+	<SignedInfo>
+		<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+		<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+		<Reference URI="#FATCA"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+		</Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+		<DigestValue>qqVB6Nal61BK/TAgJYa+jvSvhKL3lWGaVuKEl33IMUk=</DigestValue>
+	</Reference>
+</SignedInfo>
+		<SignatureValue>fpQUhrUIPLC3/DX5KIfiOquc6G6vrsrRuJYhAfgFpMkF0+67aqbLtc2hG7EkmD0LuR4wdEkqisWe6E3Adf7tqzHwuS7mdOKvRdOl5aFllroqWjH0DOqBQMM+CRpBJEJN72/vxe6OpfTjXuZX7+eDVIS2aQ9qfHw/S21nJvozCDVXItD35oDrgYufWfKBGkTAk+woPZtlYSg37xj0szijEwjkwDpUGgFkBtSzUzYuTYmBsVQlAuXR7ysLCaONDJ3srmysWGfatqSxRXTAd1+qR9TqahObUd1nifz4e4QiUGYBw5ksgTZwklo0N0nyr/r5NEkvey3w1jid8C3MMN+sZw==</SignatureValue>
+		<KeyInfo>
+			<X509Data>
+				<X509SubjectName>CN=MITRE, OU=MITRE, O=MITRE, L=MITRE, S=MITRE, C=CA</X509SubjectName>
+				<X509Certificate>MIIDWTCCAkGgAwIBAgIEMc5iTTANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJDQTEOMAwGA1UECBMFTUlUUkUxDjAMBgNVBAcTBU1JVFJFMQ4wDAYDVQQKEwVNSVRSRTEOMAwGA1UECxMFTUlUUkUxDjAMBgNVBAMTBU1JVFJFMB4XDTE0MTAyOTIyMTgzNloXDTM0MTAyNDIyMTgzNlowXTELMAkGA1UEBhMCQ0ExDjAMBgNVBAgTBU1JVFJFMQ4wDAYDVQQHEwVNSVRSRTEOMAwGA1UEChMFTUlUUkUxDjAMBgNVBAsTBU1JVFJFMQ4wDAYDVQQDEwVNSVRSRTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIqnlillRoC3dbluXCI1eGX3kIOChzuHeinMJBBtTkRgKPpRGkSFc9RqqXij4zrfWDGPDzr3bFeuyPwuOEHS/ulsdJY0lX5MEbQcphnrjMdyxSbMhJ2Tp/vLQX0TvKVWP68WnP9VyajTX3bBfGuMUNwCH772a60LPROjWvZPZ3yFVnEmnTZTeoew/M56bOXA8Kro1qUy6qPEyRxRXTmFHHm+YIBJyAWs0GSuWmrNY2Q627gbqIb2dzEWyWVd5zk3FVlixIbdVfajOCDgPG5lNRaAmZ2TR4T7AtTX29l5wfjd8yT6foAEWGYHOvwz63lzDqVZ3xQKakUa5id95z0eCdMCAwEAAaMhMB8wHQYDVR0OBBYEFJpyIPMU0kAUZ6A41g4+oojbexlJMA0GCSqGSIb3DQEBCwUAA4IBAQAYBCp1wuZtyKHDmA5LrvTbVmy85OfL9po0dTcmnJHUs0tAUdV02acwvVfy428+4c4aVnWUdgS0/SBt0BlP0HZtWVKmH/XieFA5FJNbrlFEcdNUN6KtTcjzt5o0C2MaOMpGtmGEFBY8LjRsKV/wjaDJPWUxTlPxo4TnnporEimk6FU74vzhkblm5beD/9zXglVpQ1jcpVO4gc1ziYQfwkrlJVOPua2F/Sb1NGEw1ldje8lF1S90YCBdPwEBqfuU/8UfIfVyqFo6g6AWH2rkOrHT3qIoL/3UclfcLeGrtCr5JhhuoBO6IByJFI9Pxg3BtitLrYFcyjVFFa4U204b0w8j</X509Certificate>
+			</X509Data>
+		</KeyInfo>
+		<Object Id="FATCA"><ftc:FATCA_OECD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oecd:ties:fatca:v2" xmlns:iso="urn:oecd:ties:isofatcatypes:v1" xmlns:ftc="urn:oecd:ties:fatca:v2" xmlns:stf="urn:oecd:ties:stf:v4" xmlns:sfa="urn:oecd:ties:stffatcatypes:v2" version="2.0">
+	<ftc:MessageSpec>
+		<sfa:SendingCompanyIN>000000.00000.TA.152</sfa:SendingCompanyIN>
+		<sfa:TransmittingCountry>CL</sfa:TransmittingCountry>
+		<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+		<sfa:MessageType>FATCA</sfa:MessageType>
+		<sfa:MessageRefId>2_Digital_Signature_Sample</sfa:MessageRefId>
+		<sfa:ReportingPeriod>2016-12-31</sfa:ReportingPeriod>
+		<sfa:Timestamp>2016-11-30T00:00:00</sfa:Timestamp>
+	</ftc:MessageSpec>
+	<ftc:FATCA>
+		<ftc:ReportingFI>
+			<sfa:ResCountryCode>CL</sfa:ResCountryCode>
+			<sfa:TIN issuedBy="US">2IW3WK.00000.LE.152</sfa:TIN>
+			<sfa:Name>Org Name</sfa:Name>
+			<sfa:Address>
+				<sfa:CountryCode>US</sfa:CountryCode>
+				<sfa:AddressFix>
+					<sfa:Street>123 Street</sfa:Street>
+					<sfa:PostCode>75244</sfa:PostCode>
+					<sfa:City>City</sfa:City>
+					<sfa:CountrySubentity>TX</sfa:CountrySubentity>
+				</sfa:AddressFix>
+				<sfa:AddressFree>123 Address City/State/Zip/Country</sfa:AddressFree>
+			</sfa:Address>
+			<ftc:DocSpec>
+				<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+				<ftc:DocRefId>2IW3WK.00000.LE.152.g12z421f-7a8p-4e01-7ju1-3hu165f6fz9b</ftc:DocRefId>
+			</ftc:DocSpec>
+		</ftc:ReportingFI>
+		<ftc:ReportingGroup>
+			<ftc:Sponsor>
+				<sfa:ResCountryCode>CL</sfa:ResCountryCode>
+				<sfa:TIN issuedBy="US">123456789</sfa:TIN>
+				<sfa:Name>Org Name</sfa:Name>
+				<sfa:Address>
+					<sfa:CountryCode>US</sfa:CountryCode>
+					<sfa:AddressFix>
+						<sfa:Street>123 Street</sfa:Street>
+						<sfa:BuildingIdentifier />
+						<sfa:SuiteIdentifier />
+						<sfa:FloorIdentifier />
+						<sfa:DistrictName />
+						<sfa:POB />
+						<sfa:PostCode>75244</sfa:PostCode>
+						<sfa:City>City</sfa:City>
+						<sfa:CountrySubentity>US</sfa:CountrySubentity>
+					</sfa:AddressFix>
+					<sfa:AddressFree>123 Address City, State, Zip, Country</sfa:AddressFree>
+				</sfa:Address>
+				<ftc:FilerCategory>FATCA607</ftc:FilerCategory>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+					<ftc:DocRefId>2IW3WK.00000.LE.152.b12z421f-7a8p-4e01-8uu1-3hu165f6fz9b</ftc:DocRefId>
+				</ftc:DocSpec>
+			</ftc:Sponsor>
+			<ftc:Intermediary>
+				<sfa:ResCountryCode>CL</sfa:ResCountryCode>
+				<sfa:TIN issuedBy="US">123456788</sfa:TIN>
+				<sfa:Name>Org Name</sfa:Name>
+				<sfa:Address>
+					<sfa:CountryCode>US</sfa:CountryCode>
+					<sfa:AddressFix>
+						<sfa:Street>123 Street</sfa:Street>
+						<sfa:PostCode>75244</sfa:PostCode>
+						<sfa:City>City</sfa:City>
+						<sfa:CountrySubentity>TX</sfa:CountrySubentity>
+					</sfa:AddressFix>
+					<sfa:AddressFree>123 Address City/State/Zip/Country</sfa:AddressFree>
+				</sfa:Address>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+					<ftc:DocRefId>2IW3WK.00000.LE.152.b12z421f-7a8p-4e01-7ju1-3hu171f6fz9b</ftc:DocRefId>
+				</ftc:DocSpec>
+			</ftc:Intermediary>
+			<ftc:AccountReport>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+					<ftc:DocRefId>2IW3WK.00000.LE.152.g12z421f-7a8p-4e01-7ju1-3hu165a4fz9b</ftc:DocRefId>
+				</ftc:DocSpec>
+				<ftc:AccountNumber>ABCD12345</ftc:AccountNumber>
+				<ftc:AccountClosed>false</ftc:AccountClosed>
+				<ftc:AccountHolder>
+					<ftc:Individual>
+						<sfa:ResCountryCode>CL</sfa:ResCountryCode>
+						<sfa:TIN issuedBy="US">123456787</sfa:TIN>
+						<sfa:Name>
+							<sfa:FirstName>John</sfa:FirstName>
+							<sfa:MiddleName>Peter</sfa:MiddleName>
+							<sfa:LastName>Smith</sfa:LastName>
+						</sfa:Name>
+						<sfa:Address>
+							<sfa:CountryCode>US</sfa:CountryCode>
+							<sfa:AddressFix>
+								<sfa:Street>234 Street</sfa:Street>
+								<sfa:PostCode>75244</sfa:PostCode>
+								<sfa:City>City</sfa:City>
+								<sfa:CountrySubentity>TX</sfa:CountrySubentity>
+							</sfa:AddressFix>
+							<sfa:AddressFree>234 Address City/State/Zip/Country</sfa:AddressFree>
+						</sfa:Address>
+						<sfa:BirthInfo>
+							<sfa:BirthDate>1960-01-01</sfa:BirthDate>
+						</sfa:BirthInfo>
+					</ftc:Individual>
+				</ftc:AccountHolder>
+				<ftc:SubstantialOwner>
+					<ftc:Individual>
+						<sfa:TIN>222334444</sfa:TIN>
+						<sfa:Name>
+							<sfa:FirstName>Clay</sfa:FirstName>
+							<sfa:LastName>Rodgers</sfa:LastName>
+						</sfa:Name>
+						<sfa:Address>
+							<sfa:CountryCode>CL</sfa:CountryCode>
+							<sfa:AddressFree>789 Address/City/State/Zip/Country</sfa:AddressFree>
+						</sfa:Address>
+					</ftc:Individual>
+				</ftc:SubstantialOwner>
+				<ftc:AccountBalance currCode="USD">8711120.00</ftc:AccountBalance>
+				<ftc:Payment>
+					<ftc:Type>FATCA504</ftc:Type>
+					<ftc:PaymentAmnt currCode="USD">15000.00</ftc:PaymentAmnt>
+				</ftc:Payment>
+			</ftc:AccountReport>
+			<ftc:PoolReport>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+					<ftc:DocRefId>2IW3WK.00000.LE.152.b12z421f-7a8p-4e01-7ju1-3hu172c6fz9b</ftc:DocRefId>
+				</ftc:DocSpec>
+				<ftc:AccountCount>10</ftc:AccountCount>
+				<ftc:AccountPoolReportType>FATCA201</ftc:AccountPoolReportType>
+				<ftc:PoolBalance currCode="USD">911500.00</ftc:PoolBalance>
+			</ftc:PoolReport>
+		</ftc:ReportingGroup>
+	</ftc:FATCA>
+</ftc:FATCA_OECD>
+</Object>
+</Signature>

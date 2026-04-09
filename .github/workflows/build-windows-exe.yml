@@ -1,0 +1,43 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build GUI EXE
+        run: pyinstaller fatca_crypto_gui.spec
+
+      - name: Build CLI EXE
+        run: pyinstaller fatca_crypto.spec
+
+      - name: Upload GUI EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: FATCACrypto-GUI-Windows
+          path: dist/FATCACrypto.exe
+
+      - name: Upload CLI EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: FATCACrypto-CLI-Windows
+          path: dist/fatca-crypto.exe
