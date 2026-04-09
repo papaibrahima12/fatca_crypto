@@ -10,7 +10,7 @@ Produces:
 """
 
 a = Analysis(
-    ['fatca_crypto/__main__.py'],
+    ['__main__.py'],
     pathex=[],
     binaries=[],
     datas=[],
