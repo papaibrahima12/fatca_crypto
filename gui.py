@@ -15,7 +15,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 
-from . import __version__, __app_name__
+from __init__ import __version__, __app_name__
 
 
 # ---------------------------------------------------------------------------

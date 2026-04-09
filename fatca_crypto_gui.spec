@@ -10,11 +10,26 @@ Produces:
 """
 
 a = Analysis(
-    ['__main__.py'],
-    pathex=[],
+    ['launcher_gui.py'],
+    pathex=['.'],
     binaries=[],
     datas=[],
     hiddenimports=[
+        'fatca_crypto',
+        'fatca_crypto.cli',
+        'fatca_crypto.gui',
+        'fatca_crypto.crypto',
+        'fatca_crypto.crypto.certificates',
+        'fatca_crypto.crypto.encryptor',
+        'fatca_crypto.crypto.decryptor',
+        'fatca_crypto.crypto.signer',
+        'fatca_crypto.crypto.packaging',
+        'fatca_crypto.utils',
+        'fatca_crypto.utils.errors',
+        'fatca_crypto.utils.security',
+        'fatca_crypto.utils.validators',
+        'fatca_crypto.xml',
+        'fatca_crypto.xml.parser',
         'lxml',
         'lxml.etree',
         'lxml._elementpath',

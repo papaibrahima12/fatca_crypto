@@ -17,12 +17,12 @@ from cryptography.hazmat.primitives.asymmetric import rsa, ec
 from cryptography.hazmat.primitives.asymmetric.types import PrivateKeyTypes
 from cryptography.x509 import Certificate
 
-from ..utils.errors import (
+from utils.errors import (
     CertificateError,
     CertificateNotFoundError,
     InvalidGIINError,
 )
-from ..utils.validators import (
+from utils.validators import (
     validate_certificate_expiry,
     validate_file_exists,
     validate_giin,
